@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2024 at 10:06 AM
+-- Generation Time: Aug 04, 2024 at 05:55 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -30,10 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `mobile` varchar(15) NOT NULL
+  `mobile_number` varchar(15) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `mobile_number`, `created_at`) VALUES
+(1, 'gbtan1991', '$2y$10$ALmwy0AzQHVKnx..ID5Rke7JC6wTKVmOgQWsjKQaBFrVlYRqO3TbO', 'gilbert.tan1991@gmail.com', '09102634621', '2024-08-04 15:14:54'),
+(2, 'ymgl', '$2y$10$CcyhgMLa/7weGO5Irc9zNOmfzimP7ntsW5qDw0tvCYREIPGa2aeja', 'ymgl@gmail.com', '09123456789', '2024-08-04 15:47:41'),
+(3, 'chim123', '$2y$10$yWKhQosK1olkAvLbHp3l/.Hip2EO0lbU6oJTAqULI0JVikv5OM4DW', 'chim123@gmail.com', '09987654321', '2024-08-04 15:54:46');
 
 --
 -- Indexes for dumped tables
@@ -45,9 +55,8 @@ CREATE TABLE `users` (
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `password` (`password`),
   ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `mobile` (`mobile`);
+  ADD UNIQUE KEY `mobile_number` (`mobile_number`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -57,7 +66,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
