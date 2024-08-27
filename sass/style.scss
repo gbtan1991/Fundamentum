@@ -16,10 +16,38 @@ body {
     background-color: $timberwolf;
 }
 
-.custom-button {
-    background-color: $primary;
-    color: #fff;
-    border-radius: 50px;
+
+
+
+
+header{
+    background-color: $hunter-green;
+
+  /* Default styles */
+.company-logo img {
+    width: 75px; /* Set the default width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.company-logo h1 {
+    font-size: 2rem; /* Default font size */
+}
+
+.custom-toggler {
+    height: 50px; /* Adjust the height of the toggle button */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767.98px) { /* Bootstrap's breakpoint for small devices */
+    .company-logo img {
+        width: 50px; /* Smaller size for mobile view */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .company-logo h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile view */
+    }
 }
 
 
+}
