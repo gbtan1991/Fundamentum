@@ -1,0 +1,25 @@
+@import "variables";
+
+// Import Bootstrap functions and variables
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optionally, override Bootstrap variables here
+$primary: #ff6347; // Example: change primary color to tomato
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Your custom styles
+body {
+    background-color: $timberwolf;
+}
+
+.custom-button {
+    background-color: $primary;
+    color: #fff;
+    border-radius: 50px;
+}
+
+

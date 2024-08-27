@@ -1,8 +1,8 @@
+<?php 
+include 'includes/header.php';
 
+require 'dashboard.php';
 
-<?php
+include 'includes/footer.php';
 
-require 'includes/functions.php';
-
-login_required();
 ?>
