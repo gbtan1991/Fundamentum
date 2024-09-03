@@ -1,8 +1,11 @@
-<?php 
-include 'includes/header.php';
+<?php
+session_start();
 
-require 'dashboard.php';
-
-include 'includes/footer.php';
-
+if (isset($_SESSION['user_id'])) {
+    header('Location: dashboard.php');
+    exit;
+} else {
+    header('Location: login.php');
+    exit;
+}
 ?>
