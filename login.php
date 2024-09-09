@@ -89,11 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="password">Password</label>
             </div>
 
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>
+          
             <button class="w-100 btn btn-lg btn-dark" type="submit">Login</button>
             <p class="mt-3 mb-3"><a href="registration.php">Sign up for an account</a></p>
             <p class="mt-5 mb-3 text-muted">Fundamentum &copy; 2024</p>
